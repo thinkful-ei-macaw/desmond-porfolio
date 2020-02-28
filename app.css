@@ -1,0 +1,32 @@
+body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  nav{
+    position: fixed;
+    display: flex;
+  }
+  ul{
+    align-self: flex-end;
+    list-style: none;
+    float:right;
+    
+  }
+  
+  li{
+    margin: 5px;
+    align-self: flex-end;
+  }
+
+/* mobile first
+min and maximum media querie
+  
+portfolio
+hamburger menu */
+/* 
+100vh for sections
+nav-fixed */
