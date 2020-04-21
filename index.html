@@ -1,45 +1,77 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>portfolio</title>
-    <link href="app.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
-  <header>
-	<nav class="hamburger">
-		<ul class="menu">
-            <li><a class="navbar" href="#main">Main</a></li>
-			<li><a class="navbar" href="#about-me"> About Me</a></li>
-			<li><a class="navbar" href="#porfolio"> Portfolio</a></li>
-			<li><a class="navbar" href="#contact-me">Contact Me</a></li>
-		</ul>
-	</nav>
-  </header>
-  <main>
-    <section class="main">
-        <p>Hello, I'm Desmond Wareham, a full-stack developer based in Atlanta, Georgia.
-        </p>
-    </section>
-  <section class="bio">
-    <P>
-   I have always had a passion for technology. I am currently enrolled in Thinkful's Engineering Immersion program. In my past life I worked as a production assistant for film, television, and events. When I am not coding I am reading or making music.
-    </p>
-</section>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> 
+        <title></title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
 
-  <section class="portfolio">
-    <p></p>
-    <img src="quiz-screenshot.png">
-    <a href="https://thinkful-ei-macaw.github.io/Quiz-App-MelanieDesmond/"></a>
-    
-</section>
-  <section class="contact">
-    <a href="mailto:desmond.wareham@gmail.com">Email Me</a> 
-    <a href="linkedin.com">Visit me on Linkedin</a>
-    <a href="https://github.com/desmondwa">Github Repos</a>
-  </section>
- 
-    <script src="script.js"></script>
-  </body>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="#intro">Main</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <div id="intro">
+                <h1 class="text-center">Intro text</h1>
+
+                <p>
+                   Hello, I'm Desmond Wareham, a full-stack developer based in Atlanta, GA.
+                </p>
+
+              
+            </div>
+
+            <div id="about">
+                <h1 class="text-center">About Me</h1>
+
+                <p>
+                    I have always had a passion for technology. I am currently enrolled in Thinkful's Engineering Immersion program. In my past life I worked as a production assistant for film, television, and events. When I am not coding I am reading or making music. 
+                </p>
+
+                
+            </div>
+
+            <div id="portfolio">
+                <h1 class="text-center">Portfolio</h1>
+
+
+                <div class="block text-center">
+                    <div>
+                        <img src="quiz-screenshot.png">
+                        <p><b>Quiz App</b></p>
+                        <p>Test your Game of Thrones Knowledge with this minimalist web app built using jquery, html and vanilla css</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="contact">
+                <h1 class="text-center">Contact Me</h1>
+
+                <p class="text-center">
+                    <a href="https://github.com" target="_blank">Link to Github</a>
+                    <br><br>
+                    <a href="https://linkedin.com" target="_blank">Link to Linkedin</a>
+                    <br><br>
+                    <a href="mailto:desmond.wareham@gmail.com" target="_blank">Link to Email</a>
+                </p>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $("nav a").on("click", function(e) {
+                var section = $(this).attr("href");
+
+                $("html, body").animate({ scrollTop: $(section).offset().top - $("nav").height() - 20 }, 500);
+            });
+        </script>
+    </body>
 </html>
